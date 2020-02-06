@@ -1,0 +1,57 @@
+.form-control {
+    position: relative;
+    border: 1px solid $color-light-gray;
+    border-radius: 4px;
+    color: $text-color;
+    padding: 12px 15px;
+    transition: $transition-base;
+    width: 100%;
+    &.errorBorder {
+        border-color: $color-red;
+    }
+    &-placeholder {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: $color-light-gray;
+        opacity: 0.5;
+        overflow: hidden;
+        padding: 5px;
+        pointer-events: none;
+        transition: $transition-base;
+        user-select: none;
+        white-space: nowrap;
+        z-index: 1;
+    }
+    &:focus {
+        border-color: $color-blue;
+        outline: 0;
+    }
+    &:focus + .form-control-placeholder,
+    &:valid + .form-control-placeholder {
+        font-size: 90%;
+        line-height: 15px;
+        font-weight: 600;
+        transform: translateY( -150%);
+        opacity: 1;
+        background-color: $color-white;
+        color: $color-light-gray;
+    }
+    &:focus + .form-control-placeholder {
+        color: $color-blue;
+    }
+    &--search {
+        background-color: $color-light-blue;
+    }
+}
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  border: 1px solid $color-light-gray;
+  -webkit-text-fill-color: $text-color;
+  box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+    

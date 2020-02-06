@@ -1,0 +1,47 @@
+.form-group {
+    position: relative;
+    margin: 10px 0 30px;
+    &--loop::before, 
+    &--chevron-down::before {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color:$color-light-gray;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900; 
+        text-decoration: inherit;
+        z-index: 1;
+    }
+    &--chevron-down {
+        cursor: pointer;
+        &::before {
+        content: "\f078";
+    }
+    }
+    &--loop {
+        margin: 10px 5px 0px;
+        &::before {
+            content: "\f002";
+        }
+        input {
+            border: none;
+        }
+    }
+    .error {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        font-size: 10px;
+        margin: 5px 0;
+        color: $color-red;
+        position: absolute;
+        bottom: -23px;
+        display: block;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+}

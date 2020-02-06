@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+
+    <title>Zadanie rekrutacyjne</title>
+</head>
+
+<body>
+    <section id="app">
+        <div class="container">
+            <div class="search">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="company-name" required>
+                    <label class="form-control-placeholder" for="company-name">Nazwa firmy</label>
+                </div>
+                <div class="form-group form-group--chevron-down search-worker">
+                    <input class="form-control" type="text" id="workers" name="workers" value="Adam Nowak" required>
+                    <label class="form-control-placeholder" for="workers">Pracownik</label>
+                    <div class="custom-select">
+                        <ul></ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <form class="add-task" name="add-task" novalidate>
+                <h5>Zadania</h5>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="task-name" required>
+                    <label class="form-control-placeholder" for="task-name">Nazwa zadania</label>
+                    <span class="error">Podaj nazwę zadania. Min. liczba znaków 5</span>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" id="task-price" required>
+                    <label class="form-control-placeholder" for="task-price">Kwota w PLN</label>
+                    <span class="error">Podaj kwotę</span>
+                </div>
+                <div class="add-task__actions">
+                    <p>1 euro = <span class="course"></span></p>
+                    <button class="btn" id="submit" type="submit">Dodaj</button>
+                </div>
+            </form>
+            <div class="table-responsive">
+                <table id="table-task" class="table-responsive-full sort-table">
+                    <thead>
+                        <tr>
+                            <th class="name">Nowe zadania
+                                <div class="sort-table-arrows">
+                                    <button class="sort-btn sort-name-asc">
+                                        <i class="fas fa-sort-up"></i>
+                                    </button>
+                                    <button class="sort-btn sort-name-desc">
+                                        <i class="fas fa-sort-down"></i>
+                                    </button>
+                                </div>
+                            </th>
+                            <th class="pricePLN">Kwota w PLN
+                                <div class="sort-table-arrows">
+                                    <button class="sort-btn sort-pricePln-asc">
+                                        <i class="fas fa-sort-up"></i>
+                                    </button>
+                                    <button class="sort-btn sort-pricePln-desc">
+                                        <i class="fas fa-sort-down"></i>
+                                    </button>
+                                </div>
+                            </th>
+                            <th class="priceEURO">Kwota w EURO
+                                <div class="sort-table-arrows">
+                                    <button class="sort-btn sort-priceEur-asc">
+                                        <i class="fas fa-sort-up"></i>
+                                    </button>
+                                    <button class="sort-btn sort-priceEur-desc">
+                                        <i class="fas fa-sort-down"></i>
+                                    </button>
+                                </div>
+                            </th>
+                            <th class="option">Opcje</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tasks-lists"></tbody>
+                </table>
+                <div class="table-sum">
+                    <p>Suma: <span class="sumPLN"></span> PLN (<span class="sumEURO"></span> Euro)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./src/js/libs/jquery-3.4.1.js"></script>
+    <script src="./dist/js/scripts.min.js"></script>
+</body>
+
+</html>

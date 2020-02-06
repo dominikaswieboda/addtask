@@ -1,0 +1,62 @@
+.custom-select {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: $color-white;
+    border: 1.2px solid $color-light-blue;
+    box-shadow: 0px 8px 13px 0 rgba(0,0,0,0.2);
+    max-height: 175px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: $transition-base;
+    ul {
+        list-style-type: none;
+        padding: 10px 0;
+        margin: 0;
+        position: relative;
+    }
+    li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition: $transition-base;
+        padding: 5px;
+        position: relative;
+        cursor: pointer;
+        p {
+            padding-left: 10px;
+        }
+
+        &:hover {
+            background-color: $color-light-blue;
+        }
+        &.active {
+            color: $color-blue;
+            font-weight: 600;
+            i {
+                display: block;
+            }
+        }
+        i {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+    }
+    span {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+}

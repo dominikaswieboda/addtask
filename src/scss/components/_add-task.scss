@@ -1,0 +1,10 @@
+.add-task {
+    h5 {
+        margin-bottom: 25px;
+    }
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

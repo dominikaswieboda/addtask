@@ -1,0 +1,20 @@
+.search {
+    margin: 40px 0;
+    hr {
+        background-color: $color-light-gray;
+        height: 0.2px;
+        margin-top: 50px;
+    }
+    &-worker {
+        &.active {
+            &::before {
+                content: '\f002';
+            }
+            .custom-select {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+    }
+}

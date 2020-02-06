@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 320px; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 15px; /* 3 */
+  padding-right: 15px; /* 3 */
+  width: 100%; /* 1 */
+  @include respond-to('small') {
+    max-width: 546px;
+  }
+  @include respond-to('medium') {
+    max-width: 715px;
+  }
+  @include respond-to('large') {
+    max-width: 1230px;
+  }
+}
